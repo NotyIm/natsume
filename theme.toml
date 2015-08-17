@@ -3,16 +3,16 @@
 
 name = "Natsume"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://siteforthistheme.com/"
-tags = ["", ""]
-features = ["", ""]
+licenselink = "https://github.com/notyim/natsume/blob/master/LICENSE.md"
+description = "Port of Natsume theme for hugo"
+homepage = "http://noty.im/blog/"
+tags = ["noty.im", "axcoto.com", "simple", "minimal"]
+features = ["responsive", "syntax", "highlight"]
 min_version = 0.13
 
 [author]
-  name = ""
-  homepage = ""
+  name = "kureikain"
+  homepage = "https://axcoto.com"
 
 # If porting an existing theme
 [original]
