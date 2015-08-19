@@ -1,26 +1,22 @@
 {{ partial "header.html" . }}
 <body class="{{ .Site.Params.themeColor }}">
 
-  {{ partial "sidebar.html" . }}
-
-  <div class="content container">
-    <div class="posts">
-
-      {{ range .Data.Pages }}
-      <div class="post">
-        <h1 class="post-title">
-          <a href="{{ .Permalink }}">
-            {{ .Title }}
-          </a>
-        </h1>
-
-        <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-
-        {{ .Content }}
+  <section class="container px2 py3">
+    {{ partial "sidebar.html" . }}
+    <div class="clearfix mxn2">
+      <div class="sm-col sm-col-8 md-col-9 px2 content">
+        <div class="posts">
+          {{ range .Data.Pages }}
+          <h2 class="h3">
+            <span><a href="{{ .Permalink }}">{{ .Title }}</a> <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
+          </h2>
+          {{ .Content }}
+          {{ end }}
+        </div>
       </div>
-      {{ end }}
     </div>
-  </div>
+  </section>
 
 </body>
 </html>
+
