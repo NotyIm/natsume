@@ -1,8 +1,26 @@
 {{ partial "header.html" . }}
 <body class="{{ .Site.Params.themeColor }}">
 
+  <header class="white bg-gray bg-cover bg-center"
+    style="background-image: url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*DZwdGMaeu-rvTroJYui6Uw.jpeg)">
+    <nav class="clearfix white">
+      <div class="sm-col">
+        <a href="/" class="btn py2">Home</a>
+        <a href="/" class="btn py2">About</a>
+        <a href="/" class="btn py2">Code</a>
+      </div>
+      <div class="sm-col-right">
+        <a href="/" class="btn py2">Contact</a>
+      </div>
+    </nav>
+    <div class="center px2 py4">
+      <h1 class="h1 h0-responsive caps mt4 mb0 regular">NotyIM</h1>
+      <p class="h3">Server monitoring immediately</p>
+      <a href="#" class="h3 btn btn-primary mb4">Try it</a>
+    </div>
+  </header>
+
   <section class="container px2 py3">
-    {{ partial "sidebar.html" . }}
     <div class="clearfix mxn2">
       <div class="sm-col sm-col-8 md-col-9 px2 content">
         <div class="posts">
@@ -17,6 +35,8 @@
     </div>
   </section>
 
+  {{ partial "sidebar.html" . }}
+  {{ partial "footer.html" . }}
 </body>
 </html>
 
