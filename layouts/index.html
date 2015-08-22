@@ -25,16 +25,18 @@
       <div class="sm-col sm-col-8 md-col-9 px2 content">
         <div class="posts">
           {{ range .Data.Pages }}
-          <h2 class="h3">
-            <span><a href="{{ .Permalink }}">{{ .Title }}</a> <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
-          </h2>
-          {{ .Content }}
+            <h2 class="h3">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            <h4>Post on <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></h4>
+            {{ .Content }}
           {{ end }}
         </div>
       </div>
     </div>
   </section>
 
+  {{ partial "pagination.html" . }}
   {{ partial "sidebar.html" . }}
   {{ partial "footer.html" . }}
 </body>
