@@ -5,17 +5,18 @@
     style="background-image: url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*DZwdGMaeu-rvTroJYui6Uw.jpeg)">
     <nav class="clearfix white">
       <div class="sm-col">
-        <a href="/" class="btn py2">Home</a>
-        <a href="/" class="btn py2">About</a>
-        <a href="/" class="btn py2">Code</a>
+        <a href="/" class="btn py2">Noty</a>
+        <a href="/" class="btn py2">Blog</a>
+        <a href="about" class="btn py2">About</a>
+        <a href="//github.com/notyim" class="btn py2">Code</a>
       </div>
       <div class="sm-col-right">
-        <a href="/" class="btn py2">Contact</a>
+        <a href="/contact" class="btn py2">Contact</a>
       </div>
     </nav>
     <div class="center px2 py4">
-      <h1 class="h1 h0-responsive caps mt4 mb0 regular">NotyIM</h1>
-      <p class="h3">Server monitoring immediately</p>
+      <h1 class="h1 h0-responsive caps mt4 mb0 regular">Engineering at Noty</h1>
+      <p class="h3">Monitoring! Get Notification! Immediately!</p>
       <a href="#" class="h3 btn btn-primary mb4">Try it</a>
     </div>
   </header>
@@ -23,13 +24,16 @@
   <section class="container px2 py3">
     <div class="clearfix mxn2">
       <div class="sm-col sm-col-8 md-col-9 px2 content">
-        <div class="posts">
+        <div class="posts ">
           {{ range .Data.Pages }}
-            <h2 class="h3">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
-            <h4>Post on <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></h4>
-            {{ .Content }}
+            <div class="box-post">
+              <h2 class="h3">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h2>
+              <a href="{{ .Permalink }}">{{ .Description }}</a>
+              <h4>Post on <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></h4>
+              <!--{{ .Content }}-->
+            </div>
           {{ end }}
         </div>
       </div>
@@ -37,7 +41,6 @@
   </section>
 
   {{ partial "pagination.html" . }}
-  {{ partial "sidebar.html" . }}
   {{ partial "footer.html" . }}
 </body>
 </html>

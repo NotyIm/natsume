@@ -1,3 +1,8 @@
-@import "node_modules/basscss/css/basscss"
+@import "node_modules/basscss/css/basscss";
 
+$post_border_bottom: 1px solid #BF5606;
 
+.box-post {
+  border-bottom: $post_border_bottom;
+
+}
