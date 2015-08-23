@@ -1,8 +1,31 @@
 @import "node_modules/basscss/css/basscss";
 
-$post_border_bottom: 1px solid #BF5606;
+@import "http://fonts.googleapis.com/css?family=Fira+Sans:400,300italic'";
+
+@import "_define";
+@import "_base";
 
 .box-post {
   border-bottom: $post_border_bottom;
+
+  &__title {
+    font-family: 'Museo300', sans-serif;
+    a {
+      color: $post_color_title;
+    }
+  }
+
+  &__timestamp {
+    font-family: 'Museo300', sans-serif;
+    font-weight: normal;
+    color: $post_color_timestamp;
+  }
+
+  &__description {
+
+    font-family: 'Museo300', sans-serif;
+    font-weight: normal;
+    color: $post_color_description;
+  }
 
 }
