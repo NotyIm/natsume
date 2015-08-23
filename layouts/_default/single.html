@@ -7,7 +7,7 @@
     <div class="center px2 py4">
       <h1 class="h1 h0-responsive caps mt4 mb0 regular">{{ .Title }}</h1>
       <p class="h3">{{ .Description }}</p>
-      <span>Post on <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
+      <span>Post by {{ .Params.author }} on <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
     </div>
   </header>
 
@@ -33,5 +33,8 @@
   </section>
 
   {{ partial "footer.html" . }}
+
+  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
