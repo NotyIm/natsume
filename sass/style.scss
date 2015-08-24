@@ -4,9 +4,17 @@
 @import "_define";
 @import "_base";
 
-.noty-hero {
-  background: url('http://40.media.tumblr.com/05a502a86211f8f730115a40d4091848/tumblr_ng6t1gyHes1u5ploso1_1280.jpg') bottom;
+@mixin hero {
   background-size: cover;
+}
+
+.hero__noty {
+  background: url('http://40.media.tumblr.com/05a502a86211f8f730115a40d4091848/tumblr_ng6t1gyHes1u5ploso1_1280.jpg') bottom;
+  @include hero;
+}
+
+.hero__post {
+  @include hero;
 }
 
 .box-post {

@@ -1041,8 +1041,11 @@ a {
 h1, h2, h3, h4, h5, h6, a {
   font-family: 'Museo300'; }
 
-.noty-hero {
+.hero__noty {
   background: url("http://40.media.tumblr.com/05a502a86211f8f730115a40d4091848/tumblr_ng6t1gyHes1u5ploso1_1280.jpg") bottom;
+  background-size: cover; }
+
+.hero__post {
   background-size: cover; }
 
 .box-post {
