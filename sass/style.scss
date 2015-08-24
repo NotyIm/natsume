@@ -1,9 +1,13 @@
 @import "node_modules/basscss/css/basscss";
-
 @import "http://fonts.googleapis.com/css?family=Fira+Sans:400,300italic'";
 
 @import "_define";
 @import "_base";
+
+.noty-hero {
+  background: url('http://40.media.tumblr.com/05a502a86211f8f730115a40d4091848/tumblr_ng6t1gyHes1u5ploso1_1280.jpg') bottom;
+  background-size: cover;
+}
 
 .box-post {
   border-bottom: $post_border_bottom;

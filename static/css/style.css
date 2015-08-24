@@ -12,6 +12,7 @@
     95 Properties
 
 */
+@import "http://fonts.googleapis.com/css?family=Fira+Sans:400,300italic'";
 body {
   margin: 0; }
 
@@ -1027,3 +1028,34 @@ hr {
 
 .bg-lighten-4 {
   background-color: rgba(255, 255, 255, 0.5); }
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Museo300';
+  src: local(Museo-300), url(/fonts/Museo300-Regular.otf); }
+
+a {
+  color: #52616B; }
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: 'Museo300'; }
+
+.noty-hero {
+  background: url("http://40.media.tumblr.com/05a502a86211f8f730115a40d4091848/tumblr_ng6t1gyHes1u5ploso1_1280.jpg") bottom;
+  background-size: cover; }
+
+.box-post {
+  border-bottom: 1px solid #BF5606; }
+  .box-post__title {
+    font-family: 'Museo300', sans-serif; }
+    .box-post__title a {
+      color: #1E2022; }
+  .box-post__timestamp {
+    font-family: 'Museo300', sans-serif;
+    font-weight: normal;
+    color: #C9D6DF; }
+  .box-post__description {
+    font-family: 'Museo300', sans-serif;
+    font-weight: normal;
+    color: #52616B; }

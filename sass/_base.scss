@@ -1,19 +1,19 @@
 @font-face {
   font-style: normal;
-  font-weight: 300;
-  font-family:Museo300;
-  src:local(Museo-300), url(/blog/fonts/Museo300-Regular.otf);
+  font-weight: 400;
+  font-family: 'Museo300';
+  src:local(Museo-300), url(/fonts/Museo300-Regular.otf);
 }
 
 a {
   color: $link_color;
 }
 
-.headline {
-  font-faimily: Museo300;
+@mixin headline {
+  font-family: 'Museo300';
 }
 
 h1, h2, h3, h4, h5, h6, a {
-  @extend .headline;
+  @include headline;
 }
 
