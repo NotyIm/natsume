@@ -1039,12 +1039,15 @@ a {
   color: #52616B; }
 
 h1, h2, h3, h4, h5, h6, a {
-  font-family: 'Museo300'; }
+  font-family: "Museo300", sans-serif; }
+
+body {
+  font-size: 120%; }
 
 body,
 div,
 p, span, a {
-  font-family: 'Raleway', sans-serif; }
+  font-family: "Raleway", sans-serif; }
 
 .hero__noty {
   background: url("http://40.media.tumblr.com/05a502a86211f8f730115a40d4091848/tumblr_ng6t1gyHes1u5ploso1_1280.jpg") bottom;
@@ -1055,15 +1058,14 @@ p, span, a {
 
 .box-post {
   border-bottom: 1px solid #BF5606; }
-  .box-post__title {
-    font-family: 'Museo300', sans-serif; }
-    .box-post__title a {
-      color: #1E2022; }
+  .box-post__title a {
+    font-family: "Museo300", sans-serif;
+    color: #1E2022; }
   .box-post__timestamp {
-    font-family: 'Museo300', sans-serif;
+    font-family: "Museo300", sans-serif;
     font-weight: normal;
     color: #C9D6DF; }
   .box-post__description {
-    font-family: 'Museo300', sans-serif;
+    font-family: "Museo300", sans-serif;
     font-weight: normal;
     color: #52616B; }
