@@ -17,3 +17,9 @@ h1, h2, h3, h4, h5, h6, a {
   @include headline;
 }
 
+body,
+div,
+p, span, a {
+  font-family: 'Raleway', sans-serif;
+}
+

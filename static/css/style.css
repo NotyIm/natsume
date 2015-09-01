@@ -12,7 +12,7 @@
     95 Properties
 
 */
-@import "http://fonts.googleapis.com/css?family=Fira+Sans:400,300italic'";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
 body {
   margin: 0; }
 
@@ -1040,6 +1040,11 @@ a {
 
 h1, h2, h3, h4, h5, h6, a {
   font-family: 'Museo300'; }
+
+body,
+div,
+p, span, a {
+  font-family: 'Raleway', sans-serif; }
 
 .hero__noty {
   background: url("http://40.media.tumblr.com/05a502a86211f8f730115a40d4091848/tumblr_ng6t1gyHes1u5ploso1_1280.jpg") bottom;
