@@ -10,16 +10,20 @@ a {
 }
 
 @mixin headline {
-  font-family: 'Museo300';
+  font-family: $headline_font;
 }
 
 h1, h2, h3, h4, h5, h6, a {
   @include headline;
 }
 
+body {
+  font-size: 120%;
+}
+
 body,
 div,
 p, span, a {
-  font-family: 'Raleway', sans-serif;
+  font-family: $base_font;
 }
 

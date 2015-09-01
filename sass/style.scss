@@ -21,21 +21,20 @@
   border-bottom: $post_border_bottom;
 
   &__title {
-    font-family: 'Museo300', sans-serif;
     a {
+      font-family: $headline_font;;
       color: $post_color_title;
     }
   }
 
   &__timestamp {
-    font-family: 'Museo300', sans-serif;
+    font-family: $headline_font;;
     font-weight: normal;
     color: $post_color_timestamp;
   }
 
   &__description {
-
-    font-family: 'Museo300', sans-serif;
+    font-family: $headline_font;;
     font-weight: normal;
     color: $post_color_description;
   }
