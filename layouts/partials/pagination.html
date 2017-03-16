@@ -1,23 +1,21 @@
-<div class="center">
-  <div class="inline-block overflow-hidden border rounded">
+<div class="section has-text-centered">
+  <div class="container">
 
     {{ if .Paginator.HasPrev }}
-    <a href="{{ .Paginator.Prev.URL}}" class="left btn border-right">
+    <a href="{{ .Paginator.Prev.URL}}" class="button">
       Previous
     </a>
     {{ end }}
 
     {{ if .Paginator.HasNext }}
-    <a href="{{ .Paginator.Next.URL }}" class="right btn">
+    <a href="{{ .Paginator.Next.URL }}" class="button">
       Next
     </a>
     {{ end }}
 
-    <div class="overflow-hidden sm-show">
       {{ range .Paginator.Pagers }}
-        <a href="{{ .URL }}{{ .PageNumber }}" class="{{ if eq . $.Paginator }}active{{ end }} right btn border-right">{{.PageNumber}}</a>
+        <a class='button' href="{{ .URL }}{{ .PageNumber }}" class="{{ if eq . $.Paginator }}active{{ end }} right btn border-right">{{.PageNumber}}</a>
       {{ end }}
-    </div>
   </div>
 </div>
 

@@ -6,10 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/NotyIm/natsume.git"
-  },
+  "repository": "https://github.com/NotyIm/natsume.git",
   "keywords": [
     "hugo",
     "natsume",
@@ -24,7 +21,10 @@
   "homepage": "https://github.com/NotyIm/natsume",
   "devDependencies": {
     "basscss": "^7.0.3",
-    "gulp": "^3.9.0",
-    "gulp-sass": "^2.0.4"
+    "gulp": "^3.9.0"
+  },
+  "dependencies": {
+    "bulma": "^0.4.0",
+    "gulp-sass": "^3.1.0"
   }
 }

@@ -1,35 +1,48 @@
 {{ partial "header.html" . }}
 <body class="{{ .Site.Params.themeColor }}">
 
-  <header class="hero__noty white bg-gray bg-cover bg-center">
-    {{ partial "nav.html" . }}
-    <div class="center px2 py4">
-      <h1 class="h1 h0-responsive caps mt4 mb0 regular">Engineering at Noty</h1>
-      <p class="h3">Monitoring! Get Notification! Immediately!</p>
-      <a href="//noty.im" class="h3 btn btn-primary mb4">Try it</a>
-    </div> 
-  </header>
+  {{ partial "nav.html" . }}
+  <section class="hero is-medium has-text-centered">
+  <div class="hero-body intro">
+    <div class="container">
+      <h1 class="title is-1">On building a simple, reliable, fast uptime monitoring</h1>
+      <h2 class="subtitle is-3">
+        Everything about how we write software at noty.im
+      </h2>
+    </div>
 
-  <section class="container px2 py3">
-    <div class="clearfix mxn2">
-      <div class="sm-col sm-col-8 md-col-9 px2 content">
-        <div class="posts">
-          {{ range .Data.Pages }}
-            <div class="box-post">
-              <h2 class="h3 box-post__title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-              </h2>
-              <a class="gray box-post__description" href="{{ .Permalink }}">{{ .Description }}</a>
-              <h6 class="gray box-post__timestamp">Post on <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></h6>
-              <!--{{ .Content }}-->
-            </div>
-          {{ end }}
+    <div class="section">
+      <p class="hero-buttons">
+      <a class="button is-primary is-large" href="//noty.im">
+        <span>Try out noty</span>
+      </a>
+      </p>
+    </div>
+  </div>
+  </section>
+  <hr>
+
+  {{ range .Data.Pages }}
+  <section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="box-post">
+          <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <h2 class="subtitle">Post on <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></h2>
+          <a class="gray box-post__description" href="{{ .Permalink }}">{{ .Description }}</a>
+          <!--{{ .Content }}-->
         </div>
       </div>
     </div>
+  </div>
+  </section>
+  {{ end }}
+
+  <section class="section">
+  <div class="container">{{ partial "pagination.html" . }}</div>
   </section>
 
-  {{ partial "pagination.html" . }}
   {{ partial "footer.html" . }}
 </body>
 </html>

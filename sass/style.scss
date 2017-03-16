@@ -1,42 +1,20 @@
-@import "node_modules/basscss/css/basscss";
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
-
 @import "_define";
 @import "_base";
+
+@import "node_modules/bulma/bulma";
 
 @mixin hero {
   background-size: cover;
 }
 
-.hero__noty {
-  background: url('//40.media.tumblr.com/05a502a86211f8f730115a40d4091848/tumblr_ng6t1gyHes1u5ploso1_1280.jpg') bottom;
-  @include hero;
-}
-
-.hero__post {
-  @include hero;
-}
-
-.box-post {
-  border-bottom: $post_border_bottom;
-
-  &__title {
-    a {
-      font-family: $headline_font;;
-      color: $post_color_title;
-    }
-  }
-
-  &__timestamp {
-    font-family: $headline_font;;
-    font-weight: normal;
-    color: $post_color_timestamp;
-  }
-
-  &__description {
-    font-family: $headline_font;;
-    font-weight: normal;
-    color: $post_color_description;
-  }
-
+.logo, .nav-item.logo {
+    font-size: 2em;
+    font-weight: lighter;
+    color: #FF7473;
+    text-transform: lowercase;
+    background: url(/images/logo-xss.png) no-repeat center;
+    background-size: 50% auto; 
+    width: 98px;
+    height: 53px;
+    text-indent: -1000px;
 }

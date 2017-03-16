@@ -1,35 +1,33 @@
 {{ partial "header.html" . }}
 <body class="{{ .Site.Params.themeColor }}">
+  {{ partial "nav.html" . }}
 
-  <header class="hero__post white bg-gray bg-cover bg-center"
-          style="background-image: url({{ .Params.background_image }})">
-    {{ partial "nav.html" . }}
-    <div class="center px2 py4">
-      <h1 class="h1 h0-responsive caps mt4 mb0 regular">{{ .Title }}</h1>
-      <p class="h3">{{ .Description }}</p>
-      <span>Post by {{ .Params.author }} on <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
-    </div>
-  </header>
-
-  <section class="container px2 py3">
-    <div class="clearfix mxn2">
-      <div class="sm-col sm-col-8 md-col-9 px2 content">
-        <div class="posts">
-          {{ range .Data.Pages }}
-          <h2 class="h3">
-            <span><a href="{{ .Permalink }}">{{ .Title }}</a> <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
-          </h2>
-          {{ end }}
-          <p>
-            {{ .Content }}
-          </p>
-          {{ if and (isset .Site.Params "disqusShortname") (ne .Site.Params.disqusShortname "") }}
-            <h2>Comments</h2>
-            {{ partial "disqus" . }}
-          {{ end }}
-        </div>
+  <section class="hero is-medium has-text-centered">
+  <div class="hero-body intro" style="background-image: url({{ .Params.background_image }}); background-size: cover;">
+    <div class="container">
+      <div class="content has-text-centered">
+        <h1 class="title is-1"><strong>{{ .Title }}</strong></h1>
+        <p class="content">{{ .Description }}</p>
+        <span>Post by {{ .Params.author }} on <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
       </div>
     </div>
+  </div>
+  </section>
+
+  <section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column posts">
+
+        <div class="content"> {{ .Content }} </div>
+
+        {{ if and (isset .Site.Params "disqusShortname") (ne .Site.Params.disqusShortname "") }}
+        <h2>Comments</h2>
+        {{ partial "disqus" . }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
   </section>
 
   {{ partial "footer.html" . }}

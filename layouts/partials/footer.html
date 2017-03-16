@@ -1,19 +1,42 @@
-<footer class="white bg-black center">
-  <div class="px2 py3 container">
-    <div class="clearfix mxn2">
-      <ul class="list-reset">
-        <li><a href="/">Home</a> </li>
-        <li><a href="/">NotyIM</a> </li>
-        <li><a href="/">About</a> </li>
-        {{ range .Site.Menus.main }}
-        <li><a href="{{.URL}}"> {{ .Name }} </a></li>
-        {{end}}
-      </ul>
+<footer class="footer">
+<div class="container">
+  <div class="columns">
+    <div class="column is-half">
+      <p class="small">
+      Built when Mochi is crying.<br>
+      <span>© 2017 <a href="//noty.im">NotyIM</a></span><br>
+      A <a href="https://yeo.space">Yeo Space</a> product.
+      </p>
+    </div>
 
-      <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> {{.Now.Format "2006"}}. All rights reserved. {{end}}</p>
+    <div class="column">
+      <h6>NotyIM</h6>
+      <ul class="list-unstyled">
+        <li><a href="/terms">Terms of Service</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/feedbacks">Feedback</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h6>Open source</h6>
+      <ul class="list-unstyled">
+        <li><a href="//github.com/notyim">Github</a></li>
+        <li><a href="//github.com/notyim/app/issues">Issue</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h6>Support</h6>
+      <ul class="list-unstyled">
+        <li><a href="/docs">Documentation</a></li>
+        <li><a href="//blog.noty.im/">Blog</a></li>
+        <li><a href="mailto:hello@noty.im">Contact</a></li>
+      </ul>
     </div>
   </div>
+</div>
 </footer>
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
